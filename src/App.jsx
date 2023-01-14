@@ -12,7 +12,7 @@ const App = () => {
 
    useEffect(() => {
       const getData = async () => {
-         const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=53b662f7ced14aada15185055231101&q=London&days=7`)
+         const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=53b662f7ced14aada15185055231101&q=London&days=7`)
          const data = await response.json()
          setCountryWeather(data)
          setDailyWeather(data.forecast.forecastday)
@@ -25,7 +25,7 @@ const App = () => {
       e.preventDefault()
       const enteredCity = searchQuery.current.value
 
-      const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=53b662f7ced14aada15185055231101&q=${enteredCity}&days=7`)
+      const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=53b662f7ced14aada15185055231101&q=${enteredCity}&days=7`)
       const data = await response.json()
 
       if (data.error) {
@@ -39,15 +39,11 @@ const App = () => {
       searchQuery.current.value = ''
    }
 
-   console.log(countryWeather)
-   console.log(hourlyWeather)
-   console.log(dailyWeather)
-
    return (
       <div className="container">
          <div className="topside">
             <div className="logo">
-               <img src="/images/weatherApp.webp" alt="" />
+               <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" alt="" />
                <h1>Weather App</h1>
             </div>
             <form onSubmit={formSubmittionHandler} className="searchbar">

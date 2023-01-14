@@ -46,6 +46,7 @@ body {
 
 .topside .searchbar {
    position: relative;
+   display: flex;
 }
 
 .topside .searchbar input {
@@ -70,7 +71,6 @@ body {
 }
 
 .topside .searchbar button {
-   padding-top: 1px;
    height: 45px;
    width: 75px;
    border: 1px solid black;
@@ -157,10 +157,6 @@ body {
       flex-direction: column;
       justify-content: right;
       gap: 2rem;
-   }
-   
-   .topside .searchbar button {
-      padding-top: 2px;
    }
 }
 
